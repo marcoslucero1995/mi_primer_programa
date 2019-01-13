@@ -1,26 +1,36 @@
 
 
-operacion_a_realizar = str(input("¿Que operacion deseas realizar? (suma / resta / division / multiplicacion: ")).upper()
+operacion_a_realizar =  input("¿Que operacion deseas realizar? ( + : - : / : *: ")
 
-primer_numero = int(input("Ingresa primer numero: "))
+while operacion_a_realizar == "+" or "-" or "/" or "*":
 
-segundo_numero = int(input("Ingresa segundo numero: "))
+        primer_numero = float(input("Ingresa primer numero: "))
 
-resultado = 0
+        segundo_numero = float(input("Ingresa segundo numero: "))
 
+        suma = primer_numero + segundo_numero
 
-if operacion_a_realizar == "SUMA":
-    resultado = primer_numero + segundo_numero
-    print("El resultado de la operacion es {}".format(resultado))
+        resta = primer_numero - segundo_numero
 
-elif operacion_a_realizar == "RESTA":
-    resultado = primer_numero - segundo_numero
-    print("El resultado de la operacion es {}".format(resultado))
+        multiplicacion = primer_numero * segundo_numero
 
-elif operacion_a_realizar == "DIVISION":
-    resultado = primer_numero / segundo_numero
-    print("El resultado de la operacion es {}".format(resultado))
+        division = primer_numero / segundo_numero
 
-elif operacion_a_realizar == "MULTIPLICACION":
-    resultado = primer_numero * segundo_numero
-    print("El resultado de la operacion es {}".format(resultado))
+        resultado = 0
+
+        if operacion_a_realizar == "+":
+            resultado = suma
+            print("El resultado de la operacion es {}".format(resultado))
+
+        elif operacion_a_realizar == "-":
+            resultado = resta
+            print("El resultado de la operacion es {}".format(resultado))
+
+        elif operacion_a_realizar == "/":
+            resultado = division
+            print("El resultado de la operacion es {}".format(resultado))
+
+        elif operacion_a_realizar == "*":
+            resultado = multiplicacion
+            print("El resultado de la operacion es {}".format(resultado))
+
